@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="images/prueba.ico" rel="shortcut icon"/>
+	<title>Prueba Datatable</title>
+	
+	<!-- Añadimos el jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<!-- Añadimos el plugin DataTables -->
+	<script type="text/javascript" src="js/datatables.js"></script>
+	<!-- Añadimos el CSS de DataTables -->
+	<link rel="stylesheet" type="text/css" href="css/datatables_style.css"/>
+	
+    <!-- A la table que tenemos en la página le añadimos el plugin "dataTable" -->
+    <script type="text/javascript">
+		$(document).ready(function() {
+			$("#laTabla").dataTable();
+		});
+	</script>
+	
+	<!-- PARA OBTENER LOS DATOS DE LA TABLA DESDE UN FICHERO JSON
+		 QUE ENVIAMOS/CREAMOS DESDE EL ARCHIVO .PHP (obtencion_datos_para_tabla.php)
+		  **** para que los datos del json se muestren en la tabla hay que eliminar el <tbody>-->
+	<!--<script type="text/javascript">
+		$(document).ready(function() {
+    		var datatable = $('#laTabla').DataTable({
+        		ajax: "obtencion_datos_para_tabla.php",
+        		columns: [
+            		{data:"nombre"},
+					{data:"apellido"},
+					{data:"provincia"},
+					{data:"edad"}
+        		]
+    		});
+		});
+	</script>-->
+</head>
+
+<body>
+	<p> Hola! Vamos a probar las DATATABLES</p>
+
+	<table id="laTabla" class="display">
+		<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Edad</th>
+				<th>Provincia</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				<td>Roberto</td>
+				<td>Hern&aacute;ndez</td>
+				<td>24</td>
+				<td>Valencia</td>
+			</tr>
+			
+			<tr>
+				<td>Jose</td>
+				<td>Soler</td>
+				<td>50</td>
+				<td>Alicante</td>
+			</tr>
+			
+			<tr>
+				<td>Pedro</td>
+				<td>L&oacute;pez</td>
+				<td>85</td>
+				<td>Castellon</td>
+			</tr>
+			
+			<tr>
+				<td>Alfonso</td>
+				<td>P&eacute;rez</td>
+				<td>82</td>
+				<td>Barcelona</td>
+			</tr>
+			
+			<tr>
+				<td>Alberto</td>
+				<td>Ben&iacute;tez</td>
+				<td>28</td>
+				<td>M&aacute;laga</td>
+			</tr>
+			
+			<tr>
+				<td>Benito</td>
+				<td>Garcia</td>
+				<td>46</td>
+				<td>Vitoria</td>
+			</tr>
+			
+			<tr>
+				<td>Antonio</td>
+				<td>Pascual</td>
+				<td>67</td>
+				<td>Pamplona</td>
+			</tr>
+			
+			<tr>
+				<td>David</td>
+				<td>Fernandez</td>
+				<td>8</td>
+				<td>Albacete</td>
+			</tr>
+			
+			<tr>
+				<td>Paco</td>
+				<td>Tudela</td>
+				<td>33</td>
+				<td>Murcia</td>
+			</tr>
+			
+			<tr>
+				<td>Luis</td>
+				<td>Ramirez</td>
+				<td>19</td>
+				<td>Lleida</td>
+			</tr>
+			
+			<tr>
+				<td>Eduardo</td>
+				<td>Bravo</td>
+				<td>65</td>
+				<td>Girona</td>
+			</tr>
+		</tbody>
+		
+		<tfooter>
+			<tr>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Edad</th>
+				<th>Provincia</th>
+			</tr>
+		</tfooter>
+	</table>
+</body>
+</html>
